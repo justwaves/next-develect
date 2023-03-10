@@ -1,22 +1,49 @@
 {
   "name": "next-develect",
   "version": "0.1.0",
-  "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install",
+    "prettier:write": "prettier --write \"**/*.{ts,js,tsx,jsx,html,css,json,yaml,md}\"",
+    "prettier:check": "prettier --check \"**/*.{ts,js,tsx,jsx,html,css,json,yaml,md}\"",
+    "lint:fix": "eslint \"**/*.{ts,js,tsx,jsx}\" --fix",
+    "lint:check": "eslint \"**/*.{ts,js,tsx,jsx}\""
   },
   "dependencies": {
-    "@types/node": "18.15.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.4",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "4.9.5"
+    "react-dom": "18.2.0"
+  },
+  "packageManager": "yarn@3.4.1",
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^13.2.4",
+    "@types/node": "^18.15.0",
+    "@types/prettier": "^2",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-next": "^13.2.4",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "lint-staged": {
+    "**/*.{ts,js,jsx,tsx,html,css,json,yaml,md}": "prettier --check",
+    "**/*.{ts,js,tsx,jsx}": "eslint"
   }
 }
