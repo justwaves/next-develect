@@ -24,7 +24,8 @@
     ".next/",
     "next.config.js",
     "postcss.config.js",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    "withTwin.js"
   ],
   "rules": {
     "import/prefer-default-export": "off",
@@ -37,6 +38,7 @@
     "import/extensions": "off",
     "react/function-component-definition": "off",
     "react/require-default-props": "off",
+    "@typescript-eslint/no-use-before-define": "off",
     "import/order": [
       "error",
       {

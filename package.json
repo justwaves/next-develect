@@ -62,5 +62,10 @@
   "lint-staged": {
     "**/*.{ts,js,jsx,tsx,html,css,json,yaml,md}": "prettier --check",
     "**/*.{ts,js,tsx,jsx}": "eslint"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
   }
 }
