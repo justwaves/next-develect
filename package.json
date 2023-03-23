@@ -28,6 +28,7 @@
     "@emotion/babel-plugin": "^11.10.6",
     "@emotion/react": "^11.10.6",
     "@next/eslint-plugin-next": "^13.2.4",
+    "@svgr/webpack": "^6.5.1",
     "@types/babel-plugin-macros": "^3",
     "@types/babel__core": "^7",
     "@types/node": "^18.15.0",
