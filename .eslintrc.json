@@ -26,7 +26,8 @@
     "postcss.config.js",
     "tailwind.config.js",
     "withTwin.js",
-    "prisma/generated/"
+    "prisma/generated/",
+    "prisma/seed.ts"
   ],
   "rules": {
     "import/prefer-default-export": "off",

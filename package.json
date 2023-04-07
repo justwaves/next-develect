@@ -14,7 +14,11 @@
     "lint:check": "eslint \"**/*.{ts,js,tsx,jsx}\"",
     "prisma:generate": "dotenv -e .env.local pnpify prisma generate",
     "prisma:migrate": "dotenv -e .env.local pnpify prisma migrate dev",
-    "prisma:studio": "dotenv -e .env.local pnpify prisma studio"
+    "prisma:studio": "dotenv -e .env.local pnpify prisma studio",
+    "prisma:seed": "sh prisma/seed.sh && dotenv -e .env.local pnpify prisma db seed"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.12.0",
