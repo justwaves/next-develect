@@ -15,7 +15,9 @@
     "prisma:generate": "dotenv -e .env.local pnpify prisma generate",
     "prisma:migrate": "dotenv -e .env.local pnpify prisma migrate dev",
     "prisma:studio": "dotenv -e .env.local pnpify prisma studio",
-    "prisma:seed": "sh prisma/seed.sh && dotenv -e .env.local pnpify prisma db seed"
+    "prisma:seed": "sh prisma/seed.sh && dotenv -e .env.local pnpify prisma db seed",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"

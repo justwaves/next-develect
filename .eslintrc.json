@@ -41,6 +41,7 @@
     "react/function-component-definition": "off",
     "react/require-default-props": "off",
     "@typescript-eslint/no-use-before-define": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
     "import/order": [
       "error",
       {
