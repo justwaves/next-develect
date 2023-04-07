@@ -1,6 +1,7 @@
+import '@/styles/globals.css'
+
 import { pretendard } from '@/styles/font'
 
-import '@/styles/globals.css'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import type { ReactElement, ReactNode } from 'react'
@@ -16,9 +17,9 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
-  return getLayout(
+  return (
     <div className={`${pretendard.className} font-sans`}>
-      <Component {...pageProps} />
+      {getLayout(<Component {...pageProps} />)}
     </div>
   )
 }
