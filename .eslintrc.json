@@ -25,7 +25,9 @@
     "next.config.js",
     "postcss.config.js",
     "tailwind.config.js",
-    "withTwin.js"
+    "withTwin.js",
+    "prisma/generated/",
+    "prisma/seed.ts"
   ],
   "rules": {
     "import/prefer-default-export": "off",
@@ -54,12 +56,12 @@
         ],
         "pathGroups": [
           {
-            "pattern": "@/pages/**",
+            "pattern": "@/prisma/**",
             "group": "parent",
             "position": "before"
           },
           {
-            "pattern": "@/shared/**",
+            "pattern": "@/public/**",
             "group": "parent",
             "position": "before"
           },
@@ -74,12 +76,17 @@
             "position": "before"
           },
           {
-            "pattern": "@/styles/**",
+            "pattern": "@/pages/**",
             "group": "parent",
             "position": "before"
           },
           {
-            "pattern": "@/public/**",
+            "pattern": "@/shared/**",
+            "group": "parent",
+            "position": "before"
+          },
+          {
+            "pattern": "@/styles/**",
             "group": "parent",
             "position": "before"
           }

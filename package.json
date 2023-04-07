@@ -11,9 +11,17 @@
     "prettier:write": "prettier --write \"**/*.{ts,js,tsx,jsx,html,css,json,yaml,md}\"",
     "prettier:check": "prettier --check \"**/*.{ts,js,tsx,jsx,html,css,json,yaml,md}\"",
     "lint:fix": "eslint \"**/*.{ts,js,tsx,jsx}\" --fix",
-    "lint:check": "eslint \"**/*.{ts,js,tsx,jsx}\""
+    "lint:check": "eslint \"**/*.{ts,js,tsx,jsx}\"",
+    "prisma:generate": "dotenv -e .env.local pnpify prisma generate",
+    "prisma:migrate": "dotenv -e .env.local pnpify prisma migrate dev",
+    "prisma:studio": "dotenv -e .env.local pnpify prisma studio",
+    "prisma:seed": "sh prisma/seed.sh && dotenv -e .env.local pnpify prisma db seed"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
+    "@prisma/client": "^4.12.0",
     "classnames": "^2.3.2",
     "next": "13.2.4",
     "react": "18.2.0",
@@ -37,9 +45,11 @@
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "@yarnpkg/pnpify": "^4.0.0-rc.42",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "babel-plugin-macros": "^3.1.0",
+    "dotenv-cli": "^7.2.1",
     "eslint": "^8.35.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -56,7 +66,9 @@
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.5",
+    "prisma": "^4.12.0",
     "tailwindcss": "^3.2.7",
+    "ts-node": "^10.9.1",
     "twin.macro": "^3.1.0",
     "typescript": "^4.9.5"
   },
