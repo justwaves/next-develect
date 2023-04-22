@@ -7,5 +7,7 @@ declare namespace NodeJS {
     DB_PORT: string
     DB_NAME: string
     DATABASE_URL: string
+    GOOGLE_CLIENT_ID: string
+    GOOGLE_CLIENT_SECRET: string
   }
 }
