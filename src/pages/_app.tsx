@@ -1,5 +1,8 @@
 import '@/styles/globals.css'
 
+import { Session } from 'next-auth'
+import { SessionProvider } from 'next-auth/react'
+
 import { pretendard } from '@/styles/font'
 
 import type { NextPage } from 'next'
@@ -10,16 +13,21 @@ export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
 
-type AppPropsWithLayout = AppProps & {
+type AppPropsWithLayout = AppProps<{ session: Session }> & {
   Component: NextPageWithLayout
 }
 
-export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+export default function MyApp({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <div className={`${pretendard.className} font-sans`}>
-      {getLayout(<Component {...pageProps} />)}
-    </div>
+    <SessionProvider session={session}>
+      <div className={`${pretendard.className} font-sans`}>
+        {getLayout(<Component {...pageProps} />)}
+      </div>
+    </SessionProvider>
   )
 }
