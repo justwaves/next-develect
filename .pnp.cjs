@@ -90,12 +90,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prisma", "npm:4.12.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:18.2.0"],\
+            ["react-hook-form", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:7.43.9"],\
             ["storybook-addon-next-router", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:4.0.2"],\
             ["style-loader", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:3.3.2"],\
             ["tailwindcss", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:3.2.7"],\
             ["ts-node", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:10.9.1"],\
             ["twin.macro", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:3.1.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
+            ["yup", "npm:1.1.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -19596,12 +19598,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prisma", "npm:4.12.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:18.2.0"],\
+            ["react-hook-form", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:7.43.9"],\
             ["storybook-addon-next-router", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:4.0.2"],\
             ["style-loader", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:3.3.2"],\
             ["tailwindcss", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:3.2.7"],\
             ["ts-node", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:10.9.1"],\
             ["twin.macro", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:3.1.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"]\
+            ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
+            ["yup", "npm:1.1.1"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -21421,6 +21425,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["property-expr", [\
+        ["npm:2.0.5", {\
+          "packageLocation": "./.yarn/cache/property-expr-npm-2.0.5-6f6bda4c65-4ebe82ce45.zip/node_modules/property-expr/",\
+          "packageDependencies": [\
+            ["property-expr", "npm:2.0.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["property-information", [\
         ["npm:5.6.0", {\
           "packageLocation": "./.yarn/cache/property-information-npm-5.6.0-1322d29e0f-fcf87c6542.zip/node_modules/property-information/",\
@@ -21759,6 +21772,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/react-dom",\
             "@types/react",\
             "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["react-hook-form", [\
+        ["npm:7.43.9", {\
+          "packageLocation": "./.yarn/cache/react-hook-form-npm-7.43.9-3a3f4f3335-65b94de625.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "npm:7.43.9"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:7.43.9", {\
+          "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-2f343e3588/0/cache/react-hook-form-npm-7.43.9-3a3f4f3335-65b94de625.zip/node_modules/react-hook-form/",\
+          "packageDependencies": [\
+            ["react-hook-form", "virtual:f40500d995ae1bc9ac1b6ceee46060e8ede977439255ca8ec26c60f60318901314cf660da7ae4927e3ca94f181a2d5fce1fed5418d237f21fce250b2bb8293c8#npm:7.43.9"],\
+            ["@types/react", "npm:18.0.28"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
             "react"\
           ],\
           "linkType": "HARD"\
@@ -23895,6 +23930,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["tiny-case", [\
+        ["npm:1.0.3", {\
+          "packageLocation": "./.yarn/cache/tiny-case-npm-1.0.3-8c9747c74e-3f7a30c39d.zip/node_modules/tiny-case/",\
+          "packageDependencies": [\
+            ["tiny-case", "npm:1.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["tiny-glob", [\
         ["npm:0.2.9", {\
           "packageLocation": "./.yarn/cache/tiny-glob-npm-0.2.9-068f4ab3f8-aea5801eb6.zip/node_modules/tiny-glob/",\
@@ -23989,6 +24033,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/toidentifier-npm-1.0.1-f759712599-952c29e2a8.zip/node_modules/toidentifier/",\
           "packageDependencies": [\
             ["toidentifier", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["toposort", [\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/toposort-npm-2.0.2-d472329c7d-d64c74b570.zip/node_modules/toposort/",\
+          "packageDependencies": [\
+            ["toposort", "npm:2.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -24295,6 +24348,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/type-fest-npm-0.8.1-351ad028fe-d61c4b2eba.zip/node_modules/type-fest/",\
           "packageDependencies": [\
             ["type-fest", "npm:0.8.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.19.0", {\
+          "packageLocation": "./.yarn/cache/type-fest-npm-2.19.0-918b953248-a4ef07ece2.zip/node_modules/type-fest/",\
+          "packageDependencies": [\
+            ["type-fest", "npm:2.19.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -25501,6 +25561,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yocto-queue-npm-0.1.0-c6c9a7db29-f77b3d8d00.zip/node_modules/yocto-queue/",\
           "packageDependencies": [\
             ["yocto-queue", "npm:0.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["yup", [\
+        ["npm:1.1.1", {\
+          "packageLocation": "./.yarn/cache/yup-npm-1.1.1-b11d3f4437-2245b64f70.zip/node_modules/yup/",\
+          "packageDependencies": [\
+            ["yup", "npm:1.1.1"],\
+            ["property-expr", "npm:2.0.5"],\
+            ["tiny-case", "npm:1.0.3"],\
+            ["toposort", "npm:2.0.2"],\
+            ["type-fest", "npm:2.19.0"]\
           ],\
           "linkType": "HARD"\
         }]\
