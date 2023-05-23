@@ -22,7 +22,7 @@ export const Header = () => {
         'h-[var(--header-height)] px-4 md:px-8 '
       )}
     >
-      <span className="flex items-center h-full gap-x-10">
+      <span className="flex h-full items-center gap-x-10">
         <Logo size="sm" linkActive />
       </span>
       <span>

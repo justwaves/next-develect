@@ -44,7 +44,7 @@ const CloseButton = memo(({ onClick }: CloseModalProps) => (
   <button
     type="button"
     onClick={onClick}
-    className="absolute right-6 top-4 cursor-pointer hover:bg-gray-100 p-1 -m-1 rounded-md transition-colors"
+    className="absolute right-6 top-4 -m-1 cursor-pointer rounded-md p-1 transition-colors hover:bg-gray-100"
   >
     <CloseIcon width={16} height={16} className="fill-gray-400" />
   </button>

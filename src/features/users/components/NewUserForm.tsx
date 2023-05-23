@@ -8,8 +8,8 @@ export const NewUserForm = () => {
 
   return (
     <div>
-      <p className="label-s font-medium text-gray-500">시작하기</p>
-      <h1 className="heading-m mt-2 font-bold">닉네임을 입력해주세요</h1>
+      <p className="font-medium text-gray-500 label-s">시작하기</p>
+      <h1 className="mt-2 font-bold heading-m">닉네임을 입력해주세요</h1>
       <form onSubmit={onSubmit} className="mt-6">
         <Input
           label="4~10자리 한글, 영문, 숫자"
