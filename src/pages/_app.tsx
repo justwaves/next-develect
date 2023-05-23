@@ -1,19 +1,28 @@
 import '@/styles/globals.css'
 
+import {
+  DehydratedState,
+  Hydrate,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 import { Session } from 'next-auth'
 import { SessionProvider } from 'next-auth/react'
+import { ReactElement, ReactNode, useState } from 'react'
 
 import { pretendard } from '@/styles/font'
 
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
-import type { ReactElement, ReactNode } from 'react'
 
 export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
 
-type AppPropsWithLayout = AppProps<{ session: Session }> & {
+type AppPropsWithLayout = AppProps<{
+  session: Session
+  dehydratedState: DehydratedState
+}> & {
   Component: NextPageWithLayout
 }
 
@@ -21,13 +30,18 @@ export default function MyApp({
   Component,
   pageProps: { session, ...pageProps },
 }: AppPropsWithLayout) {
+  const [queryClient] = useState(() => new QueryClient())
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return (
-    <SessionProvider session={session}>
-      <div className={`${pretendard.className} font-sans`}>
-        {getLayout(<Component {...pageProps} />)}
-      </div>
-    </SessionProvider>
+    <QueryClientProvider client={queryClient}>
+      <Hydrate state={pageProps.dehydratedState}>
+        <SessionProvider session={session}>
+          <div className={`${pretendard.className} font-sans`}>
+            {getLayout(<Component {...pageProps} />)}
+          </div>
+        </SessionProvider>
+      </Hydrate>
+    </QueryClientProvider>
   )
 }
