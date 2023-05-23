@@ -46,7 +46,7 @@ export const Toast = ({
 
   return (
     <Portal container={container}>
-      <div css={tw`fixed top-9 left-1/2 z-30 -translate-x-1/2 transform`}>
+      <div css={tw`fixed left-1/2 top-9 z-30 -translate-x-1/2 transform`}>
         <div
           id={`${variant}-toast`}
           css={[
@@ -86,7 +86,7 @@ export const Toast = ({
             type="button"
             onClick={closeToast}
             css={[
-              tw`-mx-1.5 ml-auto p-1.5 h-8 w-8 rounded-lg`,
+              tw`-mx-1.5 ml-auto h-8 w-8 rounded-lg p-1.5`,
               tw`inline-flex items-center justify-center`,
               tw`bg-white hover:bg-gray-100`,
             ]}

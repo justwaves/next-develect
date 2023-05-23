@@ -8,7 +8,7 @@ export const SocialLoginForm = () => {
 
   return (
     <>
-      <h1 className="heading-m font-bold">
+      <h1 className="font-bold heading-m">
         디벨렉트에 오신 것을 <br />
         환영합니다.
       </h1>
@@ -18,17 +18,17 @@ export const SocialLoginForm = () => {
       <button
         type="button"
         css={[
-          tw`w-full rounded-lg bg-gray-50 py-3 px-4 mt-8`,
-          tw`hover:bg-gray-100 transition-colors`,
+          tw`mt-8 w-full rounded-lg bg-gray-50 px-4 py-3`,
+          tw`transition-colors hover:bg-gray-100`,
           tw`flex items-center justify-center gap-2`,
           tw`border border-gray-100`,
         ]}
         onClick={signInWithGoogle}
       >
         <GoogleIcon />
-        <p className="label-m font-medium text-gray-700">구글로 시작하기</p>
+        <p className="font-medium text-gray-700 label-m">구글로 시작하기</p>
       </button>
-      <div className="label-xs mt-16 flex flex-col items-center gap-y-1 text-gray-500">
+      <div className="mt-16 flex flex-col items-center gap-y-1 text-gray-500 label-xs">
         <p>이용약관 | 개인정보처리방침</p>
         <p>Copyright © 2023 Develect. All rights reserved.</p>
       </div>

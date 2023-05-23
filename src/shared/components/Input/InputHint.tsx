@@ -23,7 +23,7 @@ export const InputHint = ({ negative, positive }: HintProps) => {
   return (
     <span
       css={[
-        tw`text-sm leading-4 mt-1 flex gap-x-1`,
+        tw`mt-1 flex gap-x-1 text-sm leading-4`,
         negative ? tw`text-red-400` : tw`text-green-400`,
       ]}
     >

@@ -68,7 +68,7 @@ export const Select = ({
       <ChevronDown
         width={16}
         height={16}
-        css={tw`absolute right-[14px] fill-gray-400 pointer-events-none`}
+        css={tw`pointer-events-none absolute right-[14px] fill-gray-400`}
       />
     </div>
     <InputHint negative={negative} positive={positive} />
