@@ -1,12 +1,10 @@
-import { yupResolver } from '@hookform/resolvers/yup'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/router'
 import { useSession } from 'next-auth/react'
 import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
 
 import { useUpdateUser } from '@/features/users/queries/useUpdateUser'
-import { yupSchema } from '@/lib/forms/yupSchema'
+import { formResolver } from '@/lib/forms/formResolver'
 
 interface NewUserFormFields {
   nickname: string
@@ -19,11 +17,7 @@ export const useNewUserForm = () => {
   const { data: session } = useSession({ required: true })
 
   const methods = useForm<NewUserFormFields>({
-    resolver: yupResolver(
-      yup.object({
-        nickname: yupSchema.nickname,
-      })
-    ),
+    resolver: formResolver(['nickname']),
     defaultValues: {
       nickname: '',
     },
