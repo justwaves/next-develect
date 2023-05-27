@@ -9,6 +9,7 @@ import {
 import { Session } from 'next-auth'
 import { SessionProvider } from 'next-auth/react'
 import { ReactElement, ReactNode, useState } from 'react'
+import { RecoilRoot } from 'recoil'
 
 import { pretendard } from '@/styles/font'
 
@@ -36,11 +37,13 @@ export default function MyApp({
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
-        <SessionProvider session={session}>
-          <div className={`${pretendard.className} font-sans`}>
-            {getLayout(<Component {...pageProps} />)}
-          </div>
-        </SessionProvider>
+        <RecoilRoot>
+          <SessionProvider session={session}>
+            <div className={`${pretendard.className} font-sans`}>
+              {getLayout(<Component {...pageProps} />)}
+            </div>
+          </SessionProvider>
+        </RecoilRoot>
       </Hydrate>
     </QueryClientProvider>
   )
