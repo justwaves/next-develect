@@ -39,7 +39,7 @@ export default function MyApp({
       <Hydrate state={pageProps.dehydratedState}>
         <RecoilRoot>
           <SessionProvider session={session}>
-            <div className={`${pretendard.className} font-sans`}>
+            <div className={`${pretendard.className} min-h-screen font-sans`}>
               {getLayout(<Component {...pageProps} />)}
             </div>
           </SessionProvider>

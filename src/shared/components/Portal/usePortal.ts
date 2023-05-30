@@ -6,7 +6,7 @@ type PortalType = 'modal' | 'popover' | 'toast'
 interface UsePortalProps {
   type: PortalType
   isOpen: boolean
-  closePortal: () => void
+  closePortal?: () => void
   triggerElement?: HTMLElement | null
   closable?: boolean
 }
@@ -51,7 +51,7 @@ export const usePortal = ({
       const isContentRef = contentRef.current?.contains(target)
 
       if (!isTriggerElement && !isContentRef) {
-        closePortal()
+        closePortal?.()
       }
     }
 
@@ -63,6 +63,7 @@ export const usePortal = ({
 
   // Route 변경 시 closePortal
   useEffect(() => {
+    if (!closePortal) return
     router.events.on('routeChangeStart', closePortal)
     return () => {
       router.events.off('routeChangeStart', closePortal)
